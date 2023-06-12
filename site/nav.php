@@ -1,20 +1,13 @@
-<html lang="en">
+<link rel="stylesheet" href="nav.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>navigatie</title>
-</head>
-
-<body>
+<header>
     <nav>
         <img src="" alt="logo">
         <ul>
             <li><a href="">Home</a></li>
+            <li><a href="">Vakanties</a></li>
+            <li><a href="">Registreren</a></li>
+            <li><a href="">Inloggen</a></li>
         </ul>
     </nav>
-</body>
-
-</html>
+</header>

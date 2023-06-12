@@ -1,7 +1,7 @@
 <?php
 // Database configuratie
 $host  = "localhost";
-$dbuser = "root";
+$dbuser = "user";
 $dbpass = "password";
 $dbname = "projectblok4";
 
