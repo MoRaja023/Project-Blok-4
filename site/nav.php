@@ -1,13 +1,25 @@
-<link rel="stylesheet" href="nav.css">
+<!DOCTYPE html>
+<html lang="en">
 
-<header>
-    <nav>
-        <img src="" alt="logo">
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Vakanties</a></li>
-            <li><a href="">Registreren</a></li>
-            <li><a href="">Inloggen</a></li>
-        </ul>
-    </nav>
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <title>Navigatie</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Vakanties</a></li>
+                <li><a href="">Registreren</a></li>
+                <li><a href="">Inloggen</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

@@ -1,5 +1,3 @@
-// Dit is het startpunt van je applicatie. 
-<?php require 'database.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
