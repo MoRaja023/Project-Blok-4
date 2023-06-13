@@ -12,24 +12,29 @@
     <?php include 'nav.php' ?>
     <main class="form-sign w-100 m-auto">
         <form method="post" action="verwerk-inloggen.php">
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+            <h1>inloggen</h1>
 
-            <div class="form-floating">
-                <input type="email" class="form control" id="floatingInput" name="email" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-            </div>
+            <div class="container">
 
-            <div class="form-floating">
-                <input type="password" class="form control" id="floatingPassword" name="password" placeholder="Password">
-                <label for="floatingPassword">Password</label>
-            </div>
+                <form action="verwerk-inloggen.php" method="post">
+                    <ul>
+                        <li>
+                            <label for="txtemail">E-mail</label><br>
+                            <input type="text" id="email" name="email" placeholder="email" autofocus>
+                        </li>
+                        <li>
+                            <label for="txtTwachtwoord">wachtwoord</label><br>
+                            <input type="password" id="wachtwoord" name="wachtwoord" placeholder="wachtwoord">
+                        </li>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                        <button class="submit">verstuur</button>
+                </form>
 
-            <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
             </div>
-            <button class="w-100 btn-lg btn-primary" type="submit">Sign in</button>
         </form>
     </main>
     <?php include 'footer.php' ?>
