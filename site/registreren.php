@@ -25,7 +25,7 @@
         <main>
 
             <div class="container">
-                <form action="verwerk-inlog.php" method="post">
+                <form action="verwerken-registreren.php" method="post">
                     <ul>
                         <li>
                             <label for="voornaam">Voornaam</label><br>
@@ -33,7 +33,7 @@
                         </li>
                         <li>
                             <label for="tussenvoegsel">Tussenvoegsel</label><br>
-                            <input type="text" id="achternaam" name="achternaam" placeholder="achternaam">
+                            <input type="text" id="tussenvoegsel" name="tussenvoegsel" placeholder="tussenvoegsel">
                         </li>
                         <li>
                             <label for="achternaam">Achternaam</label><br>
@@ -72,8 +72,8 @@
                     </ul>
                     <ul>
                         <li>
-                            <label for="password">Password</label><br>
-                            <input type="text" id="password " name="password" placeholder="password">
+                            <label for="wachtwoord">wachtwoord</label><br>
+                            <input type="text" id="wachtwoord" name="wachtwoord" placeholder="wachtwoord">
                         </li>
                         <li>
                             <label for="gebruikersnaam">Gebruikersnaam</label><br>

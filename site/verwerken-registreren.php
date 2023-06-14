@@ -2,7 +2,7 @@
 require "database.php";
 
 $voornaam = $_POST["voornaam"];
-$tussenvoegsels = $_POST["tussenvoegsels"];
+$tussenvoegsel = $_POST["tussenvoegsel"];
 $achternaam = $_POST["achternaam"];
 $geslacht = $_POST["geslacht"];
 $email = $_POST["email"];
@@ -13,13 +13,10 @@ $huisnummer = $_POST["huisnummer"];
 $postcode = $_POST["postcode"];
 $plaats = $_POST["plaats"];
 $land = $_POST["land"];
-$telefoonnummer = $_POST["telefoonnummer"];
 $mobielnummer = $_POST["mobielnummer"];
 $rol = $_POST["rol"];
-$in_dienst = $_POST["in_dienst"];
-$begin_datum = $_POST["begin_datum"];
-$afdeling = $_POST["afdeling"];
-$aantal_mensen = $_POST["aantal_mensen"];
+
+
 
 $wachtwoord_hash = password_hash($wachtwoord, PASSWORD_DEFAULT);
 

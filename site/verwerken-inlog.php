@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $email = $_POST["email"];
-$wachtwoord = $_POST["wachtwoord"];
+$wachtwoord = $_POST["password"];
 
 require 'database.php';
 
