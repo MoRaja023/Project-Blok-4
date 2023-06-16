@@ -1,58 +1,41 @@
 <?php
-
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header($_SERVER["SERVER_PROTOCOL"] . "405 Method Not Allowed", true, 405);
-    include '405.php';
+require 'database.php';
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    header($_SERVER["SERVER_PROTOCOL"] . " 405 Method Not Allowed", true, 405);
     exit;
 }
-
+$wachtwoord = $_POST["wachtwoord"];
 $email = $_POST["email"];
-$wachtwoord = $_POST["password"];
-
-require 'database.php';
-
-$sql = "SELECT * FROM gebruiker where email = '$email'";
-
+$sql = "SELECT * FROM gebruiker WHERE email = '$email'";
 $result = mysqli_query($conn, $sql);
+$user = mysqli_fetch_assoc($result);
 
-// echo password_hash('welkom', PASSWORD_DEFAULT);die;
-$gebruiker = mysqli_fetch_assoc($result);
-
-if (!is_array($gebruiker)) {
+if (!is_array($user)) {
     header("location: inloggen.php");
     exit;
 }
 
-if (password_verify($wachtwoord, $gebruiker["wachtwoord"])) {
+if (password_verify($wachtwoord, $user['password'])) {
     session_start();
+    $_SESSION['isIngelogd'] = true;
+    $_SESSION['email'] = $user['email'];
 
-    $_SESSION['voornaam'] = $gebruiker["voornaam"];
-    $_SESSION['gebruikersid'] = $gebruiker["gebruikersid"];
-
-
-    if (!is_null($gebruiker["administratorid"])) {
-
-        header('location: admin-dashboard.php');
+    if (!is_null($user['adminid'])) {
+        header("location: admin-dashboard.php");
+        $_SESSION['isAdmin'] = true;
         exit;
-    }
+    } elseif (!is_null($user['managerid'])) {
 
-    if (!is_null($gebruiker["regularid"])) {
+        header("location: manager-dashboard.php");
 
-        header('location: index-dashboard.php');
+        $_SESSION['isManager'] = true;
 
         exit;
-    }
-
-    if (!is_null($gebruiker["managerid"])) {
-
-        header('location: manager-dashboard.php');
-
+    } elseif (!is_null($user['regularid'])) {
+        header("location: regular-dashboard.php");
+        $_SESSION['isRegular'] = true;
         exit;
     }
-
-    header("location: inlog-pagina.php");
-    exit;
 }
-
-header("location: inlog-pagina.php");
+header("location: inloggen.php");
 exit;

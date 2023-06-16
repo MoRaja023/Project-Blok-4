@@ -25,7 +25,7 @@
                     </li>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" value="remember-me"> Remember me
+                            <input type="checkbox" value="remember-me"> onthoud me
                         </label>
                     </div>
                     <button class="submit">verstuur</button>

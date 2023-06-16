@@ -47,6 +47,10 @@
                             <label for="mobielnummer">Mobielnummer</label><br>
                             <input type="text" id="mobielnummer" name="mobielnummer" placeholder="mobielnummer">
                         </li>
+                        <li>
+                            <label for="telefoonnummer">telefoonnummer</label><br>
+                            <input type="text" id="telefoonnummer" name="telefoonnummer" placeholder="telefoonnummer">
+                        </li>
                     </ul>
                     <ul>
                         <li>
@@ -78,6 +82,18 @@
                         <li>
                             <label for="gebruikersnaam">Gebruikersnaam</label><br>
                             <input type="text" id="gebruikersnaam" name="gebruikersnaam" placeholder="gebruikersnaam">
+                        </li>
+                        <li>
+                            <label for="afdeling">Afdeling</label><br>
+                            <input type="text" id="afdeling" name="afdeling" placeholder="afdeling">
+                        </li>
+                        <li>
+                            <label for="aantal_mensen"></label><br>
+                            <input type="text" id="aantal_mensen" name="aantal_mensen" placeholder="aantal mensen">
+                        </li>
+                        <li>
+                            <label for="begin_datum"></label><br>
+                            <input type="text" id="begin_datum" name="begin_datum" placeholder="begin_datum">
                         </li>
                         <li>
                             <label for="rol">choose a role</label>
