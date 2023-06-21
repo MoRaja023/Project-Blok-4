@@ -57,3 +57,6 @@ if ($rol == "administrator") {
     VALUES('$voornaam','$tussenvoegsel','$achternaam','$geslacht','$gebruikersnaam''$email',,'$wachtwoord_hash','$straat','$huisnummer','$postcode','$plaats','$land','$telefoonnummer','$mobielnummer','$id')";
     mysqli_query($conn, $sql);
 }
+
+header("location: in.php");
+exit;

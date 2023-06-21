@@ -11,6 +11,9 @@
 <body>
     <?php include 'nav.php' ?>
     <?php include 'footer.php' ?>
+    <form action="log-uit.php">
+        <button></button>
+    </form>
 </body>
 
 </html>

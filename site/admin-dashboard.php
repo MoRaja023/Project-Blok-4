@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="vakantie.css">
     <title>Admin-Dashboard</title>
 </head>
 
 <body>
     <?php
-    session_start();
     // Ontvang het adminid na het inloggen
     if ($_SESSION['isAdmin'] = true) {
         // Haal de gegevens van de admin op uit de database
@@ -29,6 +28,14 @@
             echo "<th>in dienst</th>";
             echo "</tr>";
             foreach ($administrators as $administrator) {
+                $adminid = $administrator['admin id'];
+                $in_dienst = $administrator['in dienst'];
+
+                // Toon de vakantiegegevens in de tabelrijen
+                echo "<tr>";
+                echo "<td>$adminid</td>";
+                echo "<td>$in_dienst</td>";
+                echo "</tr>";
             }
         }
 

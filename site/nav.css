@@ -1,6 +1,7 @@
 nav{
     background-color: rgb(188, 121, 34);
     text-align: center;
+    position: fixed;
 }
   
 nav{

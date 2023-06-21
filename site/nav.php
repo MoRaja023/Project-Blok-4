@@ -17,11 +17,9 @@
                 <li><a href="vakantie.php">Vakanties</a></li>
                 <li><a href="registreren.php">Registreren</a></li>
                 <li><a href="inloggen.php">Inloggen</a></li>
+                <li><a href="gebruikers.php">gebruikers</a></li>
             </ul>
-            <form action="search.php" method="GET">
-                <input type="text" name="query" placeholder="Zoeken...">
-                <button type="submit">Zoeken</button>
-            </form>
+
         </nav>
     </header>
 </body>

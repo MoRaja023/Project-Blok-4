@@ -14,7 +14,7 @@ if (!is_array($user)) {
     header("location: inloggen.php");
     exit;
 }
-if (password_verify($wachtwoord, $user['password'])) {
+if (password_verify($wachtwoord, $user['wachtwoord'])) {
     session_start();
     $_SESSION['isIngelogd'] = true;
     $_SESSION['email'] = $user['email'];

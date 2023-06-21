@@ -30,7 +30,6 @@
                     </div>
                     <button class="submit">verstuur</button>
 
-
             </div>
         </form>
     </main>
