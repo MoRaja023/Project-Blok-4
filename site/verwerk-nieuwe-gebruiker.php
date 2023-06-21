@@ -31,7 +31,7 @@ if ($rol == "administrator") {
 
     $sql = "INSERT INTO gebruiker (voornaam, tussenvoegsel, achternaam, geslacht, gebruikersnaam, email, wachtwoord, straat, huisnummer, postcode, plaats, land, telefoonnummer, mobielnummer, adminid) 
 
-    VALUES('$voornaam','$tussenvoegsel','$achternaam','$geslacht','$email','$gebruikersnaam','$wachtwoord_hash','$straat','$huisnummer','$postcode','$plaats','$land','$telefoonnummer','$mobielnummer','$id')";
+    VALUES('$voornaam','$tussenvoegsel','$achternaam','$geslacht','$gebruikersnaam','$email','$wachtwoord_hash','$straat','$huisnummer','$postcode','$plaats','$land','$telefoonnummer','$mobielnummer','$id')";
     mysqli_query($conn, $sql);
 } elseif ($rol == "manager") {
     $sql = "INSERT INTO manager (afdeling, aantal_mensen)
@@ -41,7 +41,7 @@ if ($rol == "administrator") {
     $id = mysqli_insert_id($conn);
     $sql = "INSERT INTO gebruiker (voornaam, tussenvoegsel, achternaam, geslacht, gebruikersnaam, email,  wachtwoord, straat, huisnummer, postcode, plaats, land, telefoonnummer, mobielnummer, managerid) 
 
-    VALUES('$voornaam','$tussenvoegsel','$achternaam','$geslacht','$email','$gebruikersnaam','$wachtwoord_hash','$straat','$huisnummer','$postcode','$plaats','$land','$telefoonnummer','$mobielnummer','$id')";
+    VALUES('$voornaam','$tussenvoegsel','$achternaam','$geslacht','$gebruikersnaam','$email','$wachtwoord_hash','$straat','$huisnummer','$postcode','$plaats','$land','$telefoonnummer','$mobielnummer','$id')";
 
     mysqli_query($conn, $sql);
 } elseif ($rol == "regular") {
@@ -54,6 +54,6 @@ if ($rol == "administrator") {
 
     $sql = "INSERT INTO gebruiker (voornaam, tussenvoegsel, achternaam, geslacht, gebruikersnaam, email,  wachtwoord, straat, huisnummer, postcode, plaats, land, telefoonnummer, mobielnummer, regularid) 
 
-    VALUES('$voornaam','$tussenvoegsel','$achternaam','$geslacht','$email','$gebruikersnaam','$wachtwoord_hash','$straat','$huisnummer','$postcode','$plaats','$land','$telefoonnummer','$mobielnummer','$id')";
+    VALUES('$voornaam','$tussenvoegsel','$achternaam','$geslacht','$gebruikersnaam''$email',,'$wachtwoord_hash','$straat','$huisnummer','$postcode','$plaats','$land','$telefoonnummer','$mobielnummer','$id')";
     mysqli_query($conn, $sql);
 }

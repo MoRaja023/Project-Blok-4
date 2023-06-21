@@ -25,7 +25,7 @@
         <main>
 
             <div class="container">
-                <form action="verwerken-registreren.php" method="post">
+                <form action="verwerk-nieuwe-gebruiker.php" method="post">
                     <ul>
                         <li>
                             <label for="voornaam">Voornaam</label><br>

@@ -13,10 +13,10 @@
     <header>
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Vakanties</a></li>
-                <li><a href="">Registreren</a></li>
-                <li><a href="">Inloggen</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="vakantie.php">Vakanties</a></li>
+                <li><a href="registreren.php">Registreren</a></li>
+                <li><a href="inloggen.php">Inloggen</a></li>
             </ul>
             <form action="search.php" method="GET">
                 <input type="text" name="query" placeholder="Zoeken...">

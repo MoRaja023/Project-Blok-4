@@ -1,30 +1,43 @@
-<?php
-require 'database.php';
-// Ontvang het adminid na het inloggen
-$adminid = $_SESSION['adminid']; // Veronderstel dat adminid is opgeslagen in een sessie na het succesvol inloggen
+<!DOCTYPE html>
+<html lang="en">
 
-// Haal de gegevens van de admin op uit de database
-$sql = "SELECT * FROM aadministrator WHERE adminid = $adminid";
-$result = mysqli_query($conn, $sql);
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Admin-Dashboard</title>
+</head>
 
-if (mysqli_num_rows($result) > 0) {
-    // Admingegevens gevonden
-    $adminData = mysqli_fetch_assoc($result);
+<body>
+    <?php
+    session_start();
+    // Ontvang het adminid na het inloggen
+    if ($_SESSION['isAdmin'] = true) {
+        // Haal de gegevens van de admin op uit de database
+        require "database.php";
+        $sql = "SELECT * FROM administrator LEFT JOIN gebruiker ON administrator.adminid = gebruiker.adminid";
+        $result = mysqli_query($conn, $sql);
+        $administrators = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    // Adminid
-    $adminid = $adminData['adminid'];
-    // Andere admingegevens
-    $in_dienst = $adminData['in_dienst'];
+        if (mysqli_num_rows($result) > 0) {
+            // Admin-gegevens gevonden
+            echo "<h1>Admin-Dashboard</h1>";
+            echo "<table>";
+            echo "<tr>";
+            echo "<th>adminid</th>";
+            echo "<th>in dienst</th>";
+            echo "</tr>";
+            foreach ($administrators as $administrator) {
+            }
+        }
 
-    // Toon de gegevens op het admin dashboard
-    echo "<h1>Admin Dashboard</h1>";
-    echo "<p>Admin ID: " . $adminid . "</p>";
-    echo "<p>In dienst: " . $in_dienst . "</p>";
-} else {
-    // Admingegevens niet gevonden
-    echo "Geen gegevens gevonden voor dit adminid.";
-}
+        // Sluit de database connectie
+        mysqli_close($conn);
+    }
 
-// Sluit de database connectie
-mysqli_close($conn);
-?>
+    // html DOM: Document Object Model
+    ?>
+</body>
+
+</html>

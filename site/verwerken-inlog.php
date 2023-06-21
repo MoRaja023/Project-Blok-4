@@ -14,15 +14,16 @@ if (!is_array($user)) {
     header("location: inloggen.php");
     exit;
 }
-
 if (password_verify($wachtwoord, $user['password'])) {
     session_start();
     $_SESSION['isIngelogd'] = true;
     $_SESSION['email'] = $user['email'];
+    $_SESSION['email'] = $user['email'];
+    
 
     if (!is_null($user['adminid'])) {
-        header("location: admin-dashboard.php");
         $_SESSION['isAdmin'] = true;
+        header("location: admin-dashboard.php");
         exit;
     } elseif (!is_null($user['managerid'])) {
 
